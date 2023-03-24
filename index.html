@@ -10,6 +10,7 @@
 				background-size: cover;
 			}
 		</style>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 		<script src="./scripts/index.js"></script>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,28 +18,163 @@
 		<title>Terveisin,</title>
 	</head>
 	<body>
-		<h1 id="heading">Terveisin,</h1>
-		<a id="element1" href="./elements/element1.html">Link</a>
-		<a id="element2" href="./elements/element2.html">Link</a>
-		<a id="element3" href="./elements/element3.html">Link</a>
-		<label for="modal" class="label">
-			<img src="./assets/kuva4.png" class="label"/>
-		</label>
 
-		<input type="checkbox" id="modal" />
-		<label for="modal" class="label">Open Modal</label>
-		<label for="modal" class="modal-background"></label>
-		<div class="modal">
-			<div class="modal-header">
-				<label for="modal">
-					<img
-						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAdVBMVEUAAABNTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU0N3NIOAAAAJnRSTlMAAQIDBAUGBwgRFRYZGiEjQ3l7hYaqtLm8vsDFx87a4uvv8fP1+bbY9ZEAAAB8SURBVBhXXY5LFoJAAMOCIP4VBRXEv5j7H9HFDOizu2TRFljedgCQHeocWHVaAWStXnKyl2oVWI+kd1XLvFV1D7Ng3qrWKYMZ+MdEhk3gbhw59KvlH0eTnf2mgiRwvQ7NW6aqNmncukKhnvo/zzlQ2PR/HgsAJkncH6XwAcr0FUY5BVeFAAAAAElFTkSuQmCC"
-						width="16"
-						height="16"
-						alt=""
-					/>
-				</label>
+		<!-- link -->
+		<ul class="link-box">
+			<li class="item"><a href="#lb01" class="link">１</a></li>
+			<li class="item"><a href="#lb02" class="link">２</a></li>
+			<li class="item"><a href="#lb03" class="link">３</a></li>
+		</ul>
+		
+		<ul class="link-box">
+			<li class="item"><a href="#lb04" class="link">4</a></li>
+			<li class="item"><a href="#lb05" class="link">5</a></li>
+			<li class="item"><a href="#lb06" class="link">6</a></li>
+		</ul>
+
+		<ul class="link-box">
+			<li class="item"><a href="#lb07" class="link">7</a></li>
+			<li class="item"><a href="#lb08" class="link">8</a></li>
+			<li class="item"><a href="#lb09" class="link">9</a></li>
+		</ul>
+		<ul class="link-box">
+			<li class="item"><a href="#lb10" class="link">10</a></li>
+			<li class="item"><a href="#lb11" class="link">11</a></li>
+			<li class="item"><a href="#lb12" class="link">12</a></li>
+			<li class="item"><a href="#lb13" class="link">13</a></li>
+		</ul>
+		<!-- /link -->
+		
+		<!-- modal -->
+		<div id="lb01" class="modal-box">
+			<div class="button-close"><a href="#_" class="close">×</a></div>
+			<a href="#_" class="overlay"></a>
+			<div class="lightbox-wrap -color01">
+				<p class="text">BOX01</p>
+				<!-- <div class="button-prev"><a href="#lb12" class="arrow"></a></div> -->
+				<div class="button-next"><a href="#lb02" class="arrow"></a></div>
 			</div>
 		</div>
+		
+		<div id="lb02" class="modal-box">
+			<div class="button-close"><a href="#_" class="close">×</a></div>
+			<a href="#_" class="overlay"></a>
+			<div class="lightbox-wrap -color02">
+				<p class="text">BOX02</p>
+				<div class="button-prev"><a href="#lb01" class="arrow"></a></div>
+				<div class="button-next"><a href="#lb03" class="arrow"></a></div>
+			</div>
+		</div>
+		
+		<div id="lb03" class="modal-box">
+			<div class="button-close"><a href="#_" class="close">×</a></div>
+			<a href="#_" class="overlay"></a>
+			<div class="lightbox-wrap -color03">
+				<p class="text">BOX03</p>
+				<div class="button-prev"><a href="#lb02" class="arrow"></a></div>
+				<div class="button-next"><a href="#lb04" class="arrow"></a></div>
+			</div>
+		</div>
+		
+		<div id="lb04" class="modal-box">
+			<div class="button-close"><a href="#_" class="close">×</a></div>
+			<a href="#_" class="overlay"></a>
+			<div class="lightbox-wrap -color04">
+				<p class="text">BOX04</p>
+				<div class="button-prev"><a href="#lb03" class="arrow"></a></div>
+				<div class="button-next"><a href="#lb05" class="arrow"></a></div>
+			</div>
+		</div>
+		
+		<div id="lb05" class="modal-box">
+			<div class="button-close"><a href="#_" class="close">×</a></div>
+			<a href="#_" class="overlay"></a>
+			<div class="lightbox-wrap -color05">
+				<p class="text">BOX05</p>
+				<div class="button-prev"><a href="#lb04" class="arrow"></a></div>
+				<div class="button-next"><a href="#lb06" class="arrow"></a></div>
+			</div>
+		</div>
+		
+		<div id="lb06" class="modal-box">
+			<div class="button-close"><a href="#_" class="close">×</a></div>
+			<a href="#_" class="overlay"></a>
+			<div class="lightbox-wrap -color06">
+				<p class="text">BOX06</p>
+				<div class="button-prev"><a href="#lb05" class="arrow"></a></div>
+				<div class="button-next"><a href="#lb07" class="arrow"></a></div>
+			</div>
+		</div>
+
+		<div id="lb07" class="modal-box">
+			<div class="button-close"><a href="#_" class="close">×</a></div>
+			<a href="#_" class="overlay"></a>
+			<div class="lightbox-wrap -color06">
+				<p class="text">BOX07</p>
+				<div class="button-prev"><a href="#lb06" class="arrow"></a></div>
+				<div class="button-next"><a href="#lb08" class="arrow"></a></div>
+			</div>
+		</div>
+
+		<div id="lb08" class="modal-box">
+			<div class="button-close"><a href="#_" class="close">×</a></div>
+			<a href="#_" class="overlay"></a>
+			<div class="lightbox-wrap -color06">
+				<p class="text">BOX08</p>
+				<div class="button-prev"><a href="#lb07" class="arrow"></a></div>
+				<div class="button-next"><a href="#lb09" class="arrow"></a></div>
+			</div>
+		</div>
+
+		<div id="lb09" class="modal-box">
+			<div class="button-close"><a href="#_" class="close">×</a></div>
+			<a href="#_" class="overlay"></a>
+			<div class="lightbox-wrap -color06">
+				<p class="text">BOX9</p>
+				<div class="button-prev"><a href="#lb08" class="arrow"></a></div>
+				<div class="button-next"><a href="#lb10" class="arrow"></a></div>
+			</div>
+		</div>
+
+		<div id="lb10" class="modal-box">
+			<div class="button-close"><a href="#_" class="close">×</a></div>
+			<a href="#_" class="overlay"></a>
+			<div class="lightbox-wrap -color06">
+				<p class="text">BOX10</p>
+				<div class="button-prev"><a href="#lb09" class="arrow"></a></div>
+				<div class="button-next"><a href="#lb11" class="arrow"></a></div>
+			</div>
+		</div>
+
+		<div id="lb11" class="modal-box">
+			<div class="button-close"><a href="#_" class="close">×</a></div>
+			<a href="#_" class="overlay"></a>
+			<div class="lightbox-wrap -color06">
+				<p class="text">BOX11</p>
+				<div class="button-prev"><a href="#lb10" class="arrow"></a></div>
+				<div class="button-next"><a href="#lb12" class="arrow"></a></div>
+			</div>
+		</div>
+
+		<div id="lb12" class="modal-box">
+			<div class="button-close"><a href="#_" class="close">×</a></div>
+			<a href="#_" class="overlay"></a>
+			<div class="lightbox-wrap -color06">
+				<p class="text">BOX12</p>
+				<div class="button-prev"><a href="#lb11" class="arrow"></a></div>
+				<div class="button-next"><a href="#lb13" class="arrow"></a></div>
+			</div>
+		</div>
+
+		<div id="lb13" class="modal-box">
+			<div class="button-close"><a href="#_" class="close">×</a></div>
+			<a href="#_" class="overlay"></a>
+			<div class="lightbox-wrap -color06">
+				<p class="text">BOX13</p>
+				<div class="button-prev"><a href="#lb12" class="arrow"></a></div>
+				<!-- <div class="button-next"><a href="#lb01" class="arrow"></a></div> -->
+			</div>
+		</div>
+		<!-- /modal -->
 	</body>
 </html>
