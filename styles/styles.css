@@ -36,10 +36,14 @@ input[type="checkbox"]:checked ~ .modal-background {
 	box-sizing: border-box;
 	z-index: 9999;
 	padding: 0 60px;
-	outline: 3px dashed red;
-	outline-offset: -55px;
+	/* outline: 3px dashed red; */
+	/* outline-offset: -55px; */
 	overflow: scroll;
+}
 
+.modal:after {
+	content: "Painajaisen paino\nUhka heittäytyy ylitseni kuin massiivinen ryijy. Jokin on takanani. Jokin on perässäni. Tiedän\nvarmuudella vain, ettei se missään nimessä saa saada minua kiinni. Haluan juosta. Yritän\njuosta. Jalat taipuvat hitaasti kuin jähmettyvä pronssi. Pinnistän kaikkeni, mutta ympärillä\nmaisema mataa tahmaisena, ja tunnen jonkin melkein hipaisevan niskaani.\nKoti kajastaa, kovin kaukana. Keuhkoja korventaa. Kurotan kourallani kohti uksea.\nSalakavala karahka kampittaa kulkuni.\nSanomaton läsnäolo tukahduttaa minut sisäänsä.\n Havahdun sylissäsi. Olet herännyt huutooni. \"Kaikki on okei\", sanot. \"Se oli vain unta.\" Lohdutuksesi ei kuitenkaan auta hälventämään pelkoani. Olen oppinut, että joskus\nunet murtautuvat valvemaailmaan.\nHätkähdät, kun jalkani koskettaa sinua. Ja tunnet lämpimän pronssin.\nShimo Suntila";
+	text-align: center;
 }
 
 .modal > p {
@@ -66,17 +70,17 @@ input[type="checkbox"]:checked ~ .modal-background {
 }
 
 /* below is optional, it is just an example for the blue button */
-.example-label {
-	box-sizing: border-box;
+.label {
+	/* box-sizing: border-box;
 	display: inline-block;
 	padding: 10px;
 	background-color: #375d91;
 	color: #f9f9f9;
 	font-size: 12px;
-	font-weight: bold;
+	font-weight: bold; */
 	cursor: pointer;
 }
 
-.example-label:hover {
-	background-color: #3c669f;
+.label:hover {
+	transform: scale(102%);
 }
