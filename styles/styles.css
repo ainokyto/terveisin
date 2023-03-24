@@ -10,16 +10,30 @@ p {
 }
 
 .link-box {
-  display: flex;
-  justify-content: center;
   margin: 100px 0;
 }
 .link-box > .item {
   margin: 0 1em;
   list-style-type: none;
 }
-.link-box > .item > .link:hover {
+.link-box > .item > .link {
   opacity: 0.8;
+}
+.link-box > .item > .link:hover {
+  opacity: 1;
+}
+.link-box > .item > .link > img {
+  height: 200px;
+}
+
+.link {
+  opacity: 0.8;
+}
+.link:hover {
+  opacity: 1;
+}
+.link > img {
+  height: 250px;
 }
 
 .modal-box {
