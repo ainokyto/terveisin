@@ -1,5 +1,8 @@
 body {
-  background: #333;
+  background-image: url("../assets/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 p {
@@ -19,12 +22,12 @@ p {
   display: block;
   width: 50px;
   padding: 1em;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   border-radius: 3px;
   font-family: "Open Sans Condensed", sans-serif;
   text-align: center;
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
 }
 .link-box > .item > .link:hover {
   opacity: 0.8;
@@ -47,7 +50,7 @@ p {
   z-index: 4;
 }
 .modal-box > .button-close > .close {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
 }
 .modal-box > .overlay {
@@ -74,14 +77,48 @@ p {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
   overflow-x: hidden;
+  line-height: 25px;
+}
+.lightbox-wrap.-story01 {
+  text-align: center;
+}
+.lightbox-wrap.-story01 img {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .lightbox-wrap.-story01 img {
+    width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  .lightbox-wrap.-story01 img {
+    width: 60%;
+  }
+}
+.lightbox-wrap.-story02,
+.lightbox-wrap .-story05 {
+  line-height: 30px;
+}
+.lightbox-wrap.-story07 {
+  line-height: 32px;
 }
 .lightbox-wrap > .text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2em;
-  font-family: "Open Sans Condensed", sans-serif;
+  padding: 70px;
+  font-size: 20px;
+}
+.lightbox-wrap > .text span {
+  font-style: italic;
+  float: right;
+}
+@media (min-width: 768px) {
+  .lightbox-wrap > .text {
+    padding: 100px 200px 100px 100px;
+  }
+}
+@media (min-width: 1024px) {
+  .lightbox-wrap > .text {
+    padding: 100px 300px 100px 200px;
+  }
 }
 
 @keyframes fadein {

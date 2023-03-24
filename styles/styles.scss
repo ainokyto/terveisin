@@ -1,157 +1,187 @@
 body {
-  background: #333;
+	background-image: url("../assets/background.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
 }
 p {
-  margin: 0;
+	margin: 0;
 }
+
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
 
 //link
 .link-box {
-  display: flex;
-  justify-content: center;
-  margin: 100px 0;
-  > .item {
-    margin: 0 1em;
-    list-style-type: none;
-    > .link {
-      display: block;
-      width: 50px;
-      padding: 1em;
-      border: 1px solid #FFF;
-      border-radius: 3px;
-      font-family: 'Open Sans Condensed', sans-serif;
-      text-align: center;
-      text-decoration: none;
-      color: #FFF;
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-  }
+	display: flex;
+	justify-content: center;
+	margin: 100px 0;
+	> .item {
+		margin: 0 1em;
+		list-style-type: none;
+		> .link {
+			display: block;
+			width: 50px;
+			padding: 1em;
+			border: 1px solid #fff;
+			border-radius: 3px;
+			font-family: "Open Sans Condensed", sans-serif;
+			text-align: center;
+			text-decoration: none;
+			color: #fff;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
 }
 
 //modal
 .modal-box {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  //右上の閉じるボタン（×）
-  > .button-close{
-    position: absolute;
-    top: 0;
-    right: 10px;
-    font-size: 2em;
-    z-index: 4;
-    > .close {
-     color: #FFF;
-     text-decoration: none;
-    }
-  }
-  //モーダルの背景（クリックでモーダルが閉じる）
-  > .overlay {
-    display: block;
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(#000, 0.8);
-  }
+	display: none;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	//（×）
+	> .button-close {
+		position: absolute;
+		top: 0;
+		right: 10px;
+		font-size: 2em;
+		z-index: 4;
+		> .close {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+
+	> .overlay {
+		display: block;
+		position: fixed;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background: rgba(#000, 0.8);
+	}
 }
 .lightbox-wrap {
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 5%;
-  max-width: 100%;
-  max-height: 100%;
-  background: rgba(#FFF, 0.8);
-  border-radius: 5px;
-  overflow-x: hidden;
-  //ボックスの変化を分かりやすくするために指定した色
-  > .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2em;
-    font-family: 'Open Sans Condensed', sans-serif;
-  }
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 5%;
+	max-width: 100%;
+	max-height: 100%;
+	background: rgba(#fff, 0.8);
+	border-radius: 5px;
+	overflow-x: hidden;
+	line-height: 25px;
+	&.-story01 {
+		text-align: center;
+		img {
+			width: 100%;
+			@media (min-width: $breakpoint-tablet) {
+				width: 80%;
+			}
+			@media (min-width: $breakpoint-desktop) {
+				width: 60%;
+			}
+		}
+	}
+	&.-story02,
+	.-story05 {
+		line-height: 30px;
+	}
+	&.-story07 {
+		line-height: 32px;
+	}
+	> .text {
+		padding: 70px;
+		font-size: 20px;
+		span {
+			font-style: italic;
+			float: right;
+		}
+		@media (min-width: $breakpoint-tablet) {
+			padding: 100px 200px 100px 100px;
+		}
+    @media (min-width: $breakpoint-desktop) {
+			padding: 100px 300px 100px 200px;
+		}
+	}
 }
 
-//モーダルの出現用アニメーション
 @keyframes fadein {
-  0% {
-    opacity: 0;
-    display: none;
-  }
-  100% {
-    opacity: 1;
-  }
+	0% {
+		opacity: 0;
+		display: none;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 @keyframes modalShow {
-  0% {
-    opacity: 0;
-    display: block;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-//targetをトリガーにしてモーダルを開く
-.modal-box {
- &:target {
-  animation: fadein 0.1s 1;
-  opacity: 1;
-  display: block;
-  > .lightbox-wrap {
-    animation: modalShow 1s 1;
-    opacity: 1;
-    display: block;
-    }
-  }
+	0% {
+		opacity: 0;
+		display: block;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
-//light box button
+.modal-box {
+	&:target {
+		animation: fadein 0.1s 1;
+		opacity: 1;
+		display: block;
+		> .lightbox-wrap {
+			animation: modalShow 1s 1;
+			opacity: 1;
+			display: block;
+		}
+	}
+}
+
+// overlay button
 .button-prev {
-  position: absolute;
-  z-index: 4;
-  top: 50%;
-  left: 30px;
-  transform: translateX(-50%);
-  > .arrow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    border-top: 2px solid #000;
-    border-left: 2px solid #000;
-    transform: translate(-50%, -50%) rotate(-45deg);
-  }
+	position: absolute;
+	z-index: 4;
+	top: 50%;
+	left: 30px;
+	transform: translateX(-50%);
+	> .arrow {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 20px;
+		height: 20px;
+		border-top: 2px solid #000;
+		border-left: 2px solid #000;
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
 }
 .button-next {
-  position: absolute;
-  z-index: 4;
-  top: 50%;
-  right: 30px;
-  transform: translateX(-50%);
-  > .arrow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    border-top: 2px solid #000;
-    border-right: 2px solid #000;
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
+	position: absolute;
+	z-index: 4;
+	top: 50%;
+	right: 30px;
+	transform: translateX(-50%);
+	> .arrow {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 20px;
+		height: 20px;
+		border-top: 2px solid #000;
+		border-right: 2px solid #000;
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
 }
