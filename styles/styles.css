@@ -34,6 +34,63 @@ p {
 }
 .link > img {
   height: 250px;
+  position: absolute;
+}
+.link > img.-img1 {
+  height: 400px;
+  top: 55%;
+  left: 8%;
+}
+.link > img.-img2 {
+  top: 50%;
+  left: 40%;
+}
+.link > img.-img3 {
+  height: 400px;
+  left: 3%;
+}
+.link > img.-img4 {
+  top: 2%;
+  left: 58%;
+}
+.link > img.-img5 {
+  top: 75%;
+  left: 85%;
+}
+.link > img.-img6 {
+  height: 400px;
+  top: 12%;
+  left: 45%;
+}
+.link > img.-img7 {
+  height: 300px;
+  top: 45%;
+  left: 80%;
+}
+.link > img.-img8 {
+  top: 60%;
+  left: 70%;
+}
+.link > img.-img9 {
+  top: 75%;
+  left: 30%;
+}
+.link > img.-img10 {
+  top: 5%;
+  left: 20%;
+}
+.link > img.-img11 {
+  top: 2%;
+  left: 87%;
+}
+.link > img.-img12 {
+  height: 300px;
+  top: 35%;
+  left: 25%;
+}
+.link > img.-img13 {
+  top: 20%;
+  left: 65%;
 }
 
 .modal-box {
