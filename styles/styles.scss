@@ -29,6 +29,14 @@ $breakpoint-desktop: 1024px;
 	}
 }
 
+.img-wrapper {
+	@media (max-width: $breakpoint-desktop) {
+		display: flex;
+    flex-direction: column;
+    align-items: center;
+	}
+}
+
 .link {
 	opacity: 0.8;
 	&:hover {
@@ -37,6 +45,13 @@ $breakpoint-desktop: 1024px;
 	> img {
 		height: 250px;
 		position: absolute; 
+		@media (max-width: $breakpoint-desktop) {
+			height: 200px;
+			position: relative; 
+		}
+		@media (max-width: $breakpoint-tablet) {
+			height: 150px;
+		}
 		&.-img1 {
 			height: 400px; 
 			top: 55%; 
